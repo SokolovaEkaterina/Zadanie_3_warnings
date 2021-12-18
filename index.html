@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         console.log("Я вылез");
+         alert("Алярма");
+         document.write("H");
+         function my_print()
+             {
+                 alert("Я функция");
+             }
+         function add_red()
+         {
+             document.getElementById("test").classList.add("red");
+         }
+         function remove_red()
+         {
+             document.getElementById("test").classList.remove("red");
+         }
+         function toggle_red ()
+         {
+             document.getElementById("test").classList.toggle("red");
+         }
+         function my_select()
+         {
+             txt = document.getElementById("myText");
+             selected = event.target.value.substring(event.target.selectionStart,event.target.selectionEnd);
+             txt.value = selected;
+         }
+    </script>
+    <style>
+        .red
+        {
+          color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="my_print()"></button>
+    <p id="test">Пельмешки</p>
+    <button onclick="add_red()"></button>
+    <button onclick="remove_red()"></button>
+    <button onclick="toggle_red()"></button>
+    <textarea id="myText"></textarea>
+    <textarea onselect="my_select()"></textarea>
+</body>
+</html>
